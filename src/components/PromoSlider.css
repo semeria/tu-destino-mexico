@@ -1,0 +1,70 @@
+.promo-slider-wrapper {
+  margin: 20px 0;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 0 20px; /* Padding lateral para que no pegue al borde */
+  
+  /* LA MAGIA: Esto hace que el scroll se sienta "magnético" */
+  scroll-snap-type: x mandatory;
+  
+  /* Ocultar barra de scroll */
+  scrollbar-width: none; 
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-item {
+  /* Tamaño: Ocupa el 85% del ancho de la pantalla para invitar a hacer scroll */
+  min-width: 85%;
+  height: 180px;
+  background-color: #ddd;
+  border-radius: 20px;
+  
+  /* Alineación del snap */
+  scroll-snap-align: center;
+  
+  /* Estilos de imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sombreado para leer mejor el texto */
+.slider-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10; /* Encima del sombreado */
+  color: white;
+}
+
+.slider-content h3 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.slider-content button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+}

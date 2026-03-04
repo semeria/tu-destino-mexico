@@ -1,0 +1,26 @@
+/* Contenedor principal que respeta el Notch del celular */
+.header-scroll {
+  padding-top: var(--ion-safe-area-top); 
+  background: white; 
+  padding-bottom: 10px;
+}
+
+/* Ajustes del Toolbar */
+.custom-toolbar {
+  --background: transparent;
+  padding: 0 10px;
+  --min-height: 60px;
+}
+
+/* Avatar del usuario */
+.header-avatar {
+  width: 40px; 
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Logo de la empresa */
+.header-logo img {
+  width: 45px;
+  margin-left: 10px;
+}

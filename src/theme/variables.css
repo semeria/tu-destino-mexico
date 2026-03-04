@@ -1,2 +1,64 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+  --ion-color-whatsapp: #25d366;
+  --ion-color-whatsapp-rgb: 37, 211, 102;
+  --ion-color-whatsapp-contrast: #ffffff;
+  --ion-color-whatsapp-contrast-rgb: 255, 255, 255;
+  --ion-color-whatsapp-shade: #20ba5a;
+  --ion-color-whatsapp-tint: #3bd775;
+}
+
+/* Personalización del Tab Bar Flotante */
+ion-tab-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border-radius: 40px;
+  height: 70px;
+  --background: #6a2c70; /* Color morado de tu imagen */
+  border: none;
+  box-shadow: 0 10px 20px rgba(106, 44, 112, 0.4);
+  padding-bottom: 0 !important; /* Corrige padding en algunos iPhone */
+}
+
+/* Color de los iconos y texto inactivos */
+ion-tab-button {
+  --color: rgba(255, 255, 255, 0.6);
+  --color-selected: #ffffff;
+  background: transparent;
+}
+
+/* El círculo blanco detrás del icono activo (Truco visual) */
+ion-tab-button[aria-selected="true"]::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+ion-tab-button[aria-selected="true"] {
+  --color-selected: #6a2c70;
+}
+
+ion-tab-button ion-label {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.ion-color-whatsapp {
+  --ion-color-base: var(--ion-color-whatsapp);
+  --ion-color-base-rgb: var(--ion-color-whatsapp-rgb);
+  --ion-color-contrast: var(--ion-color-whatsapp-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb);
+  --ion-color-shade: var(--ion-color-whatsapp-shade);
+  --ion-color-tint: var(--ion-color-whatsapp-tint);
+}

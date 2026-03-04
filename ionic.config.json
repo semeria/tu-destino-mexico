@@ -1,5 +1,7 @@
 {
   "name": "Tu Destino Mexico",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react-vite"
 }

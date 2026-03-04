@@ -1,0 +1,64 @@
+/* El contenedor principal (la "cápsula" visual) */
+.categories-wrapper {
+  margin: 10px 15px;
+  border: 1px solid #e0e0e0; /* Un borde sutil */
+  border-radius: 30px;
+  background: white;
+  padding: 10px 5px; /* Padding vertical, menos horizontal */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* El área que hace scroll */
+.categories-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* PERMITE EL SCROLL HORIZONTAL */
+  gap: 20px; /* Espacio entre iconos */
+  padding: 0 10px;
+  
+  /* Comportamiento suave de scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Ocultar la barra de scroll (scrollbar) para que se vea limpio */
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Cada item individual */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 55px; /* IMPORTANTE: Asegura que no se aplasten */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.category-item:active {
+  transform: scale(0.95);
+}
+
+/* Estilo del círculo del icono (opcional, para darle toque moderno) */
+.cat-icon-circle {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #444;
+  white-space: nowrap; /* Evita que el texto baje de línea */
+}

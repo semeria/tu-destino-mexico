@@ -1,0 +1,112 @@
+/* Categorías */
+.categories-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border: 1px solid #7a3e94;
+  border-radius: 30px;
+  margin: 10px 15px;
+  background: white;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-icon-box {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cat-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Slider Promocional */
+.promo-slider {
+  background-color: #dcdcdc;
+  height: 180px;
+  margin: 20px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* Títulos de Sección */
+.section-title {
+  padding-left: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Scroll Horizontal (Estilo Netflix) */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 15px 20px 15px;
+  gap: 15px;
+  /* Ocultar barra de scroll */
+  scrollbar-width: none; 
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tarjetas (Cards) */
+.travel-card {
+  min-width: 260px;
+  width: 260px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.card-image {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-details {
+  padding: 12px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.stars {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.travel-card h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.travel-card p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #2c2c54;
+}
+
+.whatsapp-btn {
+  --border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  height: 40px;
+}

@@ -1,0 +1,221 @@
+/* Header Transparente */
+.header-transparent ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+
+/* Sección Hero */
+.hero-section {
+  /* Hacemos que la imagen sea alta */
+  height: 65vh; 
+  width: 100%;
+  
+  /* Ajuste de imagen */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: block;
+  
+  /* Borde inferior redondeado */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+  
+  /* IMPORTANTE: Esto asegura que empiece desde el borde superior */
+  margin-top: 0; 
+  padding-top: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Gradiente: Oscuro arriba (para ver los iconos) y oscuro abajo (para el texto) */
+  background: linear-gradient(
+    to bottom, 
+    rgba(0,0,0,0.4) 0%,   /* Oscuridad superior para status bar */
+    rgba(0,0,0,0) 20%,    /* Centro limpio */
+    rgba(0,0,0,0.1) 60%, 
+    rgba(0,0,0,0.8) 100%  /* Oscuridad inferior para textos */
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.slider-dots {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.dot {
+  width: 8px; height: 8px; background: rgba(255,255,255,0.5); border-radius: 50%;
+}
+.dot.active { background: white; }
+
+/* Contenido del Detalle */
+.detail-content {
+  padding: 20px;
+}
+
+/* Pestañas */
+.custom-segment {
+  background: #6a2c70;
+  border-radius: 20px;
+  padding: 5px;
+}
+.custom-segment ion-segment-button {
+  --border-radius: 20px;
+  --color: #fff;
+  --color-checked: #000;
+  --background-checked: #6a2c70;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.segment-content h3 {
+  font-weight: 700;
+  margin-top: 20px;
+}
+.description-text {
+  color: #444;
+  line-height: 1.6;
+}
+
+.includes-list {
+  display: flex;
+  gap: 40px;
+}
+.includes-list ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.includes-list li {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Mapas */
+.map-container {
+  border-radius: 20px;
+  overflow: hidden; /* Esto intenta recortar las esquinas del mapa nativo */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  background-color: #eee; /* Fondo gris mientras carga */
+}
+
+capacitor-google-map {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+}
+
+.map-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer */
+.detail-footer ion-toolbar {
+  --background: transparent;
+  padding: 0 20px 20px 20px;
+}
+.main-whatsapp-btn {
+  --border-radius: 25px;
+  font-weight: 800;
+  height: 60px;
+  font-size: 16px;
+}
+
+/* Hacemos que el header flote sobre el contenido */
+ion-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*padding-top: var(--ion-safe-area-top);*/
+  z-index: 10;
+  background: #6a2c70;
+}
+
+/* Quitamos el color y borde de la barra de herramientas */
+ion-toolbar {
+  --background: transparent;
+  --border-color: transparent;
+  --border-width: 0;
+  --box-shadow: none;
+}
+
+/* Color de los iconos (Atrás, Compartir) */
+ion-toolbar ion-buttons {
+  color: white;
+  --color: white;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Forzamos que el contenido empiece en el pixel 0 absoluto */
+ion-content {
+  --padding-top: 0px !important;
+  --offset-top: 0px !important;
+}
+
+/* Animación suave al cambiar de pestaña */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-title {
+  font-weight: 700;
+  color: #222;
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+}
+
+/* Estilo de Amenidades (Lista con grid si son muchas) */
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: 15px;
+}
+
+.amenities-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+.amenities-list ion-icon {
+  font-size: 18px;
+}
