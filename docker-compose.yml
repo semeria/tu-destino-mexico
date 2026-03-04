@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  tu-destino-app:
+    container_name: tu-destino-frontend
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+    volumes:
+      # Sincroniza todo tu código local con el contenedor
+      - .:/app 
+      # EL TRUCO: Le dice a Docker que ignore tu carpeta local de node_modules 
+      # y use la que se creó dentro del contenedor Linux.
+      - /app/node_modules 
+    command: ionic serve --host 0.0.0.0 --disableHostCheck --port 8100
